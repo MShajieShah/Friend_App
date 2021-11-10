@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+<h1 class="display-4"><%= @post.title %></h1>
+<p class= "lead" > <%= @post.description %></p>
+<hr class="my-4">
+<p class = "lead">
+<%= link_to "Edit", edit_post_path(@post), class: "btn btn-secondary" %> |
+<%= link_to "Back", posts_path, class: "btn btn-secondary" %>
+</p>
+</div>

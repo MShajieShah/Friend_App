@@ -1,0 +1,38 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+  <h3> Sub Posts</h3>
+  <div id = 'sub_posts'>
+    <%= form.fields_for :sub_posts do |sub_post| %> 
+    <% render "sub_post_fields", form: sub_post %>
+    <% end %>
+
+    <div class= "links">
+    <%= link_to_add_association "Add Sub Post", form, :sub_posts %>
+    </div>
+    <div class="field form-group">
+    <%= form.text_field :user_id, id: :post_user_id, class: "form-control", value: current_user.id, type: :hidden %>
+  </div>
+  <div class="actions">
+    <%= form.submit class: "btn btn-secondary" %>
+  </div>
+<% end %>
