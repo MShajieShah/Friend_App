@@ -1,5 +1,5 @@
-# Friends
-Objective: “Cyber Cafe Management System” has been design to manage and store information about Friends list and their posts, in this project no attempt have been made in reinventing a wheel but sincere attempts have been made in demonstrating a Friend APP .
+# Friends APP
+Objective: “Friend App” has been design to manage and store information about Friends list and their posts, in this project no attempt have been made in reinventing a wheel but sincere attempts have been made in demonstrating a Friend APP .
 
 # WORKING WITH THE SYSTEM
 Logging-in to the Application
