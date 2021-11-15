@@ -22,10 +22,13 @@ a) Add New Friend
     • Update Friend
     • Delete Friend
     • Return
+    • Post Module
+    • SubPost Module
 
 b) Post Entry has following option
     • Add New Post
     • Show Post
     • Update Post
     • Delete Post
-    • Rreturn
+    • Return
+    
