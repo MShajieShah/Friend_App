@@ -20,6 +20,7 @@
     <%= f.label :description, class: "form-label" %>
     <%= f.text_area :description, class: "form-control", required: true %>
   </div>
+    <%= f.check_box :published %>
     <h3>SubPost </h3>
     <%= f.fields_for :sub_posts do |subpost| %>
     <%= render "sub_post_fields", f: subpost %>
