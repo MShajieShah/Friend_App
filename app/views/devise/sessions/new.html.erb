@@ -1,3 +1,10 @@
+<% if flash.present? %>
+<div class = "alert  alert-info" role=  "alert">
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, id: "flash_#{name}" %>
+<% end %>
+</div>
+   <% end %>
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
