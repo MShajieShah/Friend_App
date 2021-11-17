@@ -35,6 +35,6 @@
 </table>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to "New Friend", new_friend_path, class: "btn btn-secondary" %>
-
+<% end %>
